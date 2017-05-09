@@ -1,0 +1,17 @@
+{
+    "name": "jeppos/skanetrafiken-php-api-client",
+    "description": "A simple Skånetrafiken PHP API client.",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "jms/serializer": "^1.6",
+        "guzzlehttp/guzzle": "^6.2",
+        "doctrine/common": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jeppos\\SkanetrafikenApiClient\\": "src/Jeppos/SkanetrafikenApiClient"
+        }
+    }
+}
