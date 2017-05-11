@@ -2,6 +2,7 @@
 
 namespace Jeppos\SkanetrafikenApiClient\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -75,6 +76,14 @@ class Line
      * @Serializer\Type("string")
      */
     protected $towards;
+    /**
+     * @var ArrayCollection|RealTimeInfo[]
+     *
+     * @Serializer\SerializedName("RealTime")
+     * @Serializer\XmlList(namespace="http://www.etis.fskab.se/v1.0/ETISws", entry="RealTimeInfo")
+     * @Serializer\Type("ArrayCollection<Jeppos\SkanetrafikenApiClient\Model\RealTimeInfo>")
+     */
+    protected $realTime;
     /**
      * @var integer
      *
