@@ -9,21 +9,21 @@ use JMS\Serializer\Annotation as Serializer;
  * @package Jeppos\SkanetrafikenApiClient\Model
  * @Serializer\XmlRoot(name="GetDepartureArrivalResult")
  */
-class GetDepartureArrivalResponse
+class DepartureArrivalResponse
 {
     /**
-     * @var GetDepartureArrivalResult
+     * @var DepartureArrivalResult
      *
      * @Serializer\SerializedName("GetDepartureArrivalResult")
      * @Serializer\XmlElement()
-     * @Serializer\Type("Jeppos\SkanetrafikenApiClient\Model\GetDepartureArrivalResult")
+     * @Serializer\Type("Jeppos\SkanetrafikenApiClient\Model\DepartureArrivalResult")
      */
     protected $result;
 
     /**
-     * @return GetDepartureArrivalResult
+     * @return DepartureArrivalResult
      */
-    public function getResult(): GetDepartureArrivalResult
+    public function getResult(): DepartureArrivalResult
     {
         return $this->result;
     }

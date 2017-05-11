@@ -2,12 +2,12 @@
 
 namespace Jeppos\SkanetrafikenApiClient\Service;
 
-use Jeppos\SkanetrafikenApiClient\Model\GetDepartureArrivalResponse;
+use Jeppos\SkanetrafikenApiClient\Model\DepartureArrivalResponse;
 
 /**
  * Class DepartureBoard
  * @package Jeppos\SkanetrafikenApiClient\Service
- * @method GetDepartureArrivalResponse call()
+ * @method DepartureArrivalResponse call()
  */
 class DepartureBoard extends AbstractCallService
 {
@@ -39,7 +39,7 @@ class DepartureBoard extends AbstractCallService
      */
     protected function getResponseClass(): string
     {
-        return GetDepartureArrivalResponse::class;
+        return DepartureArrivalResponse::class;
     }
 
     /**

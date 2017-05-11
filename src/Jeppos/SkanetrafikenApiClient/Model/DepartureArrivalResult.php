@@ -6,11 +6,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * Class GetDepartureArrivalResult
+ * Class DepartureArrivalResult
  * @package Jeppos\SkanetrafikenApiClient\Model
+ * @see http://labs.skanetrafiken.se/v2.2/GetDepartureArrival.xsd
  * @Serializer\XmlRoot("GetDepartureArrivalResult")
  */
-class GetDepartureArrivalResult
+class DepartureArrivalResult
 {
     /**
      * @var int
