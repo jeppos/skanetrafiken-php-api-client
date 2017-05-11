@@ -22,7 +22,7 @@ abstract class AbstractCallService
     protected $options = [];
 
     /**
-     * DepartureBoard constructor.
+     * AbstractCallService constructor.
      * @param Client $client
      */
     public function __construct(Client $client)
@@ -60,7 +60,7 @@ abstract class AbstractCallService
         /** @var \SimpleXMLElement $response */
         $response = $soap->Body->children($namespaces['']);
 
-        return $response->asXml();
+        return $response->asXML();
     }
 
     /**
