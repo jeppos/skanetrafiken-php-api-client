@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetStartEndPointResponse xmlns="http://www.etis.fskab.se/v1.0/ETISws">
+            <GetStartEndPointResult>
+                <Code>0</Code>
+                <Message/>
+                <StartPoints>
+                    <Point>
+                        <Id>80000</Id>
+                        <Name>Malmö C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6167946</X>
+                        <Y>1323245</Y>
+                    </Point>
+                    <Point>
+                        <Id>80120</Id>
+                        <Name>Malmö Södervärn</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6165692</X>
+                        <Y>1323579</Y>
+                    </Point>
+                    <Point>
+                        <Id>80140</Id>
+                        <Name>Malmö Triangeln</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6166244</X>
+                        <Y>1323220</Y>
+                    </Point>
+                    <Point>
+                        <Id>80040</Id>
+                        <Name>Malmö Hyllie</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6162868</X>
+                        <Y>1321507</Y>
+                    </Point>
+                    <Point>
+                        <Id>80110</Id>
+                        <Name>Malmö Värnhem</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6167528</X>
+                        <Y>1324673</Y>
+                    </Point>
+                    <Point>
+                        <Id>80682</Id>
+                        <Name>Malmö Persborg</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6164742</X>
+                        <Y>1324930</Y>
+                    </Point>
+                    <Point>
+                        <Id>80201</Id>
+                        <Name>Malmö Östervärn</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6167845</X>
+                        <Y>1325232</Y>
+                    </Point>
+                    <Point>
+                        <Id>80118</Id>
+                        <Name>Malmö Stadshuset</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6166898</X>
+                        <Y>1323714</Y>
+                    </Point>
+                    <Point>
+                        <Id>80580</Id>
+                        <Name>Malmö Svågertorp</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6161237</X>
+                        <Y>1322403</Y>
+                    </Point>
+                    <Point>
+                        <Id>80100</Id>
+                        <Name>Malmö Gustav Adolfs torg</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6167255</X>
+                        <Y>1323163</Y>
+                    </Point>
+                    <Point>
+                        <Id>80338</Id>
+                        <Name>Malmö Ön</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6166009</X>
+                        <Y>1318238</Y>
+                    </Point>
+                    <Point>
+                        <Id>80813</Id>
+                        <Name>Malmö Höja</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6164798</X>
+                        <Y>1327264</Y>
+                    </Point>
+                    <Point>
+                        <Id>80500</Id>
+                        <Name>Malmö Holma</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6163646</X>
+                        <Y>1322123</Y>
+                    </Point>
+                    <Point>
+                        <Id>80143</Id>
+                        <Name>Malmö Opera</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6166663</X>
+                        <Y>1322952</Y>
+                    </Point>
+                    <Point>
+                        <Id>80931</Id>
+                        <Name>Malmö Vårbo</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6165464</X>
+                        <Y>1329790</Y>
+                    </Point>
+                </StartPoints>
+                <EndPoints>
+                    <Point>
+                        <Id>80000</Id>
+                        <Name>Malmö C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6167946</X>
+                        <Y>1323245</Y>
+                    </Point>
+                    <Point>
+                        <Id>83241</Id>
+                        <Name>Helsingborg C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6217091</X>
+                        <Y>1306192</Y>
+                    </Point>
+                    <Point>
+                        <Id>93070</Id>
+                        <Name>Hässleholm C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6227407</X>
+                        <Y>1373125</Y>
+                    </Point>
+                    <Point>
+                        <Id>85131</Id>
+                        <Name>Eslövs station</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6192662</X>
+                        <Y>1343376</Y>
+                    </Point>
+                    <Point>
+                        <Id>90042</Id>
+                        <Name>Kristianstad C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6212714</X>
+                        <Y>1396899</Y>
+                    </Point>
+                    <Point>
+                        <Id>86239</Id>
+                        <Name>Ystads station</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6145979</X>
+                        <Y>1374683</Y>
+                    </Point>
+                    <Point>
+                        <Id>92010</Id>
+                        <Name>Ängelholms station</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6239216</X>
+                        <Y>1317073</Y>
+                    </Point>
+                    <Point>
+                        <Id>81216</Id>
+                        <Name>Lund C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6178379</X>
+                        <Y>1335430</Y>
+                    </Point>
+                    <Point>
+                        <Id>95006</Id>
+                        <Name>Göteborg C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6404718</X>
+                        <Y>1271669</Y>
+                    </Point>
+                    <Point>
+                        <Id>13003</Id>
+                        <Name>Halmstad C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6286320</X>
+                        <Y>1319740</Y>
+                    </Point>
+                    <Point>
+                        <Id>45007</Id>
+                        <Name>Köpenhamn H</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6176403</X>
+                        <Y>1296133</Y>
+                    </Point>
+                    <Point>
+                        <Id>10007</Id>
+                        <Name>Karlskrona C</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6226460</X>
+                        <Y>1486350</Y>
+                    </Point>
+                    <Point>
+                        <Id>78001</Id>
+                        <Name>Båstad busstn</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6259302</X>
+                        <Y>1317602</Y>
+                    </Point>
+                    <Point>
+                        <Id>45009</Id>
+                        <Name>Helsingør Färjeläge</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6216650</X>
+                        <Y>1301150</Y>
+                    </Point>
+                    <Point>
+                        <Id>10001</Id>
+                        <Name>Sölvesborg resecentrum</Name>
+                        <Type>STOP_AREA</Type>
+                        <X>6214180</X>
+                        <Y>1423901</Y>
+                    </Point>
+                </EndPoints>
+            </GetStartEndPointResult>
+        </GetStartEndPointResponse>
+    </soap:Body>
+</soap:Envelope>

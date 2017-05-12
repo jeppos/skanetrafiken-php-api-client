@@ -8,7 +8,7 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * Class DepartureArrivalResult
  * @package Jeppos\SkanetrafikenApiClient\Model
- * @see http://labs.skanetrafiken.se/v2.2/GetDepartureArrival.xsd
+ * @see http://www.labs.skanetrafiken.se/v2.2/GetDepartureArrival.xsd
  * @Serializer\XmlRoot("GetDepartureArrivalResult")
  */
 class DepartureArrivalResult implements ResultInterface

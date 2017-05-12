@@ -5,11 +5,11 @@ namespace Jeppos\SkanetrafikenApiClient\Model;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * Class GetDepartureArrivalResponse
+ * Class DepartureArrivalResponse
  * @package Jeppos\SkanetrafikenApiClient\Model
- * @Serializer\XmlRoot(name="GetDepartureArrivalResult")
+ * @Serializer\XmlRoot(name="GetDepartureArrivalResponse")
  */
-class DepartureArrivalResponse
+class DepartureArrivalResponse implements ResponseInterface
 {
     /**
      * @var DepartureArrivalResult
