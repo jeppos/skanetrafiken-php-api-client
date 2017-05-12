@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation as Serializer;
 class DepartureArrivalResult
 {
     /**
+     * Response code, 0 if successful operation
+     *
      * @var int
      *
      * @Serializer\SerializedName("Code")
@@ -22,6 +24,8 @@ class DepartureArrivalResult
      */
     protected $code;
     /**
+     * Error message, empty if response code = 0
+     *
      * @var string
      *
      * @Serializer\SerializedName("Message")
