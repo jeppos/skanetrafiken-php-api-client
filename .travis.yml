@@ -12,4 +12,4 @@ script:
   - ant build-ci
 
 after_script:
-  - php vendor/bin/codacycoverage clover clover.xml
+  - php vendor/bin/codacycoverage clover build/clover.xml
