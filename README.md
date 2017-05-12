@@ -2,6 +2,8 @@ skanetrafiken-php-api-client
 ==
 A simple Skånetrafiken PHP API client.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/11f57782e049471ba15ed0622cb1b108)](https://www.codacy.com/app/jeppos/skanetrafiken-php-api-client?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jeppos/skanetrafiken-php-api-client&amp;utm_campaign=Badge_Grade)
+
 # Installation
 Install with composer (not available yet)
 
