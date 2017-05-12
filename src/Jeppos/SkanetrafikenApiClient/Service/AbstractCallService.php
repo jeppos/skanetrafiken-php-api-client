@@ -82,10 +82,10 @@ abstract class AbstractCallService
     /**
      * @return string
      */
-    protected abstract function getResponseClass(): string;
+    abstract protected function getResponseClass(): string;
 
     /**
      * @return string
      */
-    protected abstract function getUrl(): string;
+    abstract protected function getUrl(): string;
 }
