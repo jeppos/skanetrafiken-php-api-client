@@ -11,23 +11,32 @@ use JMS\Serializer\Annotation as Serializer;
 class RealTimeInfo
 {
     /**
-     * @var string
+     * Stop Point deviation from timetable (on departure side).
+     * Information about new Stop Point
+     *
+     * @var null|string
      *
      * @Serializer\SerializedName("NewDepPoint")
      * @Serializer\XmlElement()
      * @Serializer\Type("string")
      */
-    protected $newDeparturePoint;
+    protected $newDepartureStopPoint;
     /**
-     * @var string
+     * Stop Point deviation from timetable (on arrival side).
+     * Information about new Stop Point
+     *
+     * @var null|string
      *
      * @Serializer\SerializedName("NewArrPoint")
      * @Serializer\XmlElement()
      * @Serializer\Type("string")
      */
-    protected $newArrivalPoint;
+    protected $newArrivalStopPoint;
     /**
-     * @var int
+     * Deviation from timetable time in min. (on departure side).
+     * Delays are positive integer values and earlier times are negative.
+     *
+     * @var null|int
      *
      * @Serializer\SerializedName("DepTimeDeviation")
      * @Serializer\XmlElement()
@@ -35,7 +44,9 @@ class RealTimeInfo
      */
     protected $departureTimeDeviation;
     /**
-     * @var string
+     * Describes how departure time deviation affects the journey.
+     *
+     * @var null|string
      *
      * @Serializer\SerializedName("DepDeviationAffect")
      * @Serializer\XmlElement()
@@ -43,7 +54,10 @@ class RealTimeInfo
      */
     protected $departureDeviationAffect;
     /**
-     * @var int
+     * Deviation from timetable time in min. (on arrival side).
+     * Delays are positive integer values and earlier times are negative.
+     *
+     * @var null|int
      *
      * @Serializer\SerializedName("ArrTimeDeviation")
      * @Serializer\XmlElement()
@@ -51,7 +65,9 @@ class RealTimeInfo
      */
     protected $arrivalTimeDeviation;
     /**
-     * @var string
+     * Describes how arrival time deviation affects the journey.
+     *
+     * @var null|string
      *
      * @Serializer\SerializedName("ArrDeviationAffect")
      * @Serializer\XmlElement()
@@ -59,7 +75,10 @@ class RealTimeInfo
      */
     protected $arrivalDeviationAffect;
     /**
-     * @var bool
+     * Denotes if vehicle run is canceled.
+     * This event can impact the whole journey
+     *
+     * @var null|bool
      *
      * @Serializer\SerializedName("Canceled")
      * @Serializer\XmlElement()
@@ -68,57 +87,57 @@ class RealTimeInfo
     protected $canceled;
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getNewDeparturePoint(): string
+    public function getNewDepartureStopPoint(): ?string
     {
-        return $this->newDeparturePoint;
+        return $this->newDepartureStopPoint;
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getNewArrivalPoint(): string
+    public function getNewArrivalStopPoint(): ?string
     {
-        return $this->newArrivalPoint;
+        return $this->newArrivalStopPoint;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getDepartureTimeDeviation(): int
+    public function getDepartureTimeDeviation(): ?int
     {
         return $this->departureTimeDeviation;
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getDepartureDeviationAffect(): string
+    public function getDepartureDeviationAffect(): ?string
     {
         return $this->departureDeviationAffect;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getArrivalTimeDeviation(): int
+    public function getArrivalTimeDeviation(): ?int
     {
         return $this->arrivalTimeDeviation;
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getArrivalDeviationAffect(): string
+    public function getArrivalDeviationAffect(): ?string
     {
         return $this->arrivalDeviationAffect;
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function isCanceled(): bool
+    public function getCanceled(): ?bool
     {
         return $this->canceled;
     }
