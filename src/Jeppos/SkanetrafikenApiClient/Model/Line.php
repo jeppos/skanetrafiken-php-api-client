@@ -13,8 +13,6 @@ use JMS\Serializer\Annotation as Serializer;
 class Line
 {
     /**
-     * Line's name
-     *
      * @var string
      *
      * @Serializer\SerializedName("Name")
@@ -23,8 +21,6 @@ class Line
      */
     protected $name;
     /**
-     * Line's number
-     *
      * @var integer
      *
      * @Serializer\SerializedName("No")
@@ -33,8 +29,6 @@ class Line
      */
     protected $number;
     /**
-     * Date and time for departure / arrival
-     *
      * @var \DateTime
      *
      * @Serializer\SerializedName("JourneyDateTime")
@@ -43,8 +37,6 @@ class Line
      */
     protected $journeyDateTime;
     /**
-     * Denotes if JourneyDateTime is a timing point. False means that DateTime is approximated time
-     *
      * @var boolean
      *
      * @Serializer\SerializedName("IsTimingPoint")
@@ -53,8 +45,6 @@ class Line
      */
     protected $timingPoint;
     /**
-     * Stop point
-     *
      * @var string
      *
      * @Serializer\SerializedName("StopPoint")
@@ -63,9 +53,6 @@ class Line
      */
     protected $stopPoint;
     /**
-     * Reference to one line type in line types collection defined by transport authority.
-     * All available line types and ids can be retrieved from GetMeansOfTransport function
-     *
      * @var integer
      *
      * @Serializer\SerializedName("LineTypeId")
@@ -74,8 +61,6 @@ class Line
      */
     protected $typeId;
     /**
-     * Line type name
-     *
      * @var string
      *
      * @Serializer\SerializedName("LineTypeName")
@@ -84,8 +69,6 @@ class Line
      */
     protected $typeName;
     /**
-     * Destination text
-     *
      * @var string
      *
      * @Serializer\SerializedName("Towards")
@@ -110,8 +93,6 @@ class Line
      */
     protected $realTime;
     /**
-     * Additional info about train number if route link's line type is train
-     *
      * @var integer
      *
      * @Serializer\SerializedName("TrainNo")
@@ -137,6 +118,8 @@ class Line
     protected $runNumber;
 
     /**
+     * Line's name
+     *
      * @return string
      */
     public function getName(): string
@@ -145,6 +128,8 @@ class Line
     }
 
     /**
+     * Line's number
+     *
      * @return int
      */
     public function getNumber(): int
@@ -153,6 +138,8 @@ class Line
     }
 
     /**
+     * Date and time for departure / arrival
+     *
      * @return \DateTime
      */
     public function getJourneyDateTime(): \DateTime
@@ -161,6 +148,8 @@ class Line
     }
 
     /**
+     * Denotes if JourneyDateTime is a timing point. False means that DateTime is approximated time
+     *
      * @return bool
      */
     public function isTimingPoint(): bool
@@ -169,6 +158,8 @@ class Line
     }
 
     /**
+     * Stop point
+     *
      * @return string
      */
     public function getStopPoint(): string
@@ -177,6 +168,9 @@ class Line
     }
 
     /**
+     * Reference to one line type in line types collection defined by transport authority.
+     * All available line types and ids can be retrieved from GetMeansOfTransport function
+     *
      * @return int
      */
     public function getTypeId(): int
@@ -185,6 +179,8 @@ class Line
     }
 
     /**
+     * Line type name
+     *
      * @return string
      */
     public function getTypeName(): string
@@ -193,6 +189,8 @@ class Line
     }
 
     /**
+     * Destination text
+     *
      * @return string
      */
     public function getTowards(): string
@@ -217,6 +215,8 @@ class Line
     }
 
     /**
+     * Additional info about train number if route link's line type is train
+     *
      * @return int
      */
     public function getTrainNumber(): int

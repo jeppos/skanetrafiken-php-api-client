@@ -22,6 +22,10 @@ abstract class AbstractCallService
      * @var array
      */
     protected $options = [];
+    /**
+     * @var Response
+     */
+    protected $response;
 
     /**
      * AbstractCallService constructor.
@@ -35,10 +39,13 @@ abstract class AbstractCallService
     public function call()
     {
         $url = 'http://www.labs.skanetrafiken.se/v2.2/' . $this->getUrl();
-        $response = $this->client->request('GET', $url . '?' . http_build_query($this->options));
+        $this->response = $this->client->request('GET', $url . '?' . http_build_query($this->options));
 
-        $xmlFromSoapResponse = $this->getXmlFromSoapResponse($response);
+        return $this;
+    }
 
+    public function getResponse()
+    {
         $serializer = SerializerBuilder::create()
             ->addDefaultHandlers()
             ->configureHandlers(function (HandlerRegistry $registry) {
@@ -46,17 +53,16 @@ abstract class AbstractCallService
             })
             ->build();
 
-        return $serializer->deserialize($xmlFromSoapResponse, $this->getResponseClass(), 'xml');
+        return $serializer->deserialize($this->getXmlFromResponse(), $this->getResponseClass(), 'xml');
     }
 
     /**
-     * @param Response $response
      * @return string
      */
-    private function getXmlFromSoapResponse(Response $response): string
+    private function getXmlFromResponse(): string
     {
         $xml = simplexml_load_string(
-            $response->getBody()->getContents(),
+            $this->response->getBody()->getContents(),
             null,
             null,
             'http://schemas.xmlsoap.org/soap/envelope/'

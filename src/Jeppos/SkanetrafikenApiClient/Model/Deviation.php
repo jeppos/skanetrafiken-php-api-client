@@ -53,8 +53,6 @@ class Deviation
      */
     protected $summary;
     /**
-     * SMS Text
-     *
      * @var string
      *
      * @Serializer\SerializedName("ShortText")
@@ -136,6 +134,8 @@ class Deviation
     }
 
     /**
+     * SMS Text
+     *
      * @return string
      */
     public function getShortText(): string

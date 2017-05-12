@@ -12,8 +12,6 @@ use JMS\Serializer\Annotation as Serializer;
 class StopAreaData
 {
     /**
-     * Stop area name
-     *
      * @var string
      *
      * @Serializer\SerializedName("Name")
@@ -22,8 +20,6 @@ class StopAreaData
      */
     protected $name;
     /**
-     * X coordinate, RT90 system
-     *
      * @var int
      *
      * @Serializer\SerializedName("X")
@@ -32,8 +28,6 @@ class StopAreaData
      */
     protected $x;
     /**
-     * Y coordinate, RT90 system
-     *
      * @var int
      *
      * @Serializer\SerializedName("Y")
@@ -43,6 +37,8 @@ class StopAreaData
     protected $y;
 
     /**
+     * Stop area name
+     *
      * @return string
      */
     public function getName(): string
@@ -51,6 +47,8 @@ class StopAreaData
     }
 
     /**
+     * X coordinate, RT90 system
+     *
      * @return int
      */
     public function getX(): int
@@ -59,6 +57,8 @@ class StopAreaData
     }
 
     /**
+     * Y coordinate, RT90 system
+     *
      * @return int
      */
     public function getY(): int

@@ -11,11 +11,9 @@ use JMS\Serializer\Annotation as Serializer;
  * @see http://labs.skanetrafiken.se/v2.2/GetDepartureArrival.xsd
  * @Serializer\XmlRoot("GetDepartureArrivalResult")
  */
-class DepartureArrivalResult
+class DepartureArrivalResult implements ResultInterface
 {
     /**
-     * Response code, 0 if successful operation
-     *
      * @var int
      *
      * @Serializer\SerializedName("Code")
@@ -24,8 +22,6 @@ class DepartureArrivalResult
      */
     protected $code;
     /**
-     * Error message, empty if response code = 0
-     *
      * @var string
      *
      * @Serializer\SerializedName("Message")
@@ -51,7 +47,7 @@ class DepartureArrivalResult
     protected $stopAreaData;
 
     /**
-     * @return int
+     * @inheritdoc
      */
     public function getCode(): int
     {
@@ -59,7 +55,7 @@ class DepartureArrivalResult
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
     public function getMessage(): string
     {

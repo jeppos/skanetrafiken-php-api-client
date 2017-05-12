@@ -7,7 +7,7 @@ use Jeppos\SkanetrafikenApiClient\Model\DepartureArrivalResponse;
 /**
  * Class DepartureBoard
  * @package Jeppos\SkanetrafikenApiClient\Service
- * @method DepartureArrivalResponse call()
+ * @method DepartureArrivalResponse getResponse()
  */
 class DepartureBoard extends AbstractCallService
 {
