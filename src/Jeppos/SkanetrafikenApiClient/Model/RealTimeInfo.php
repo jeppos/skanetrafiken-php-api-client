@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * Class RealTimeInfo
  * @package Jeppos\SkanetrafikenApiClient\Model
+ * @Serializer\XmlRoot("RealTimeInfo")
  */
 class RealTimeInfo
 {
@@ -46,11 +47,11 @@ class RealTimeInfo
     /**
      * Describes how departure time deviation affects the journey.
      *
-     * @var null|string
+     * @var null|RealTimeAffect
      *
      * @Serializer\SerializedName("DepDeviationAffect")
      * @Serializer\XmlElement()
-     * @Serializer\Type("string")
+     * @Serializer\Type("enum<Jeppos\SkanetrafikenApiClient\Model\RealTimeAffect, string>")
      */
     protected $departureDeviationAffect;
     /**
@@ -67,11 +68,11 @@ class RealTimeInfo
     /**
      * Describes how arrival time deviation affects the journey.
      *
-     * @var null|string
+     * @var null|RealTimeAffect
      *
      * @Serializer\SerializedName("ArrDeviationAffect")
      * @Serializer\XmlElement()
-     * @Serializer\Type("string")
+     * @Serializer\Type("enum<Jeppos\SkanetrafikenApiClient\Model\RealTimeAffect, string>")
      */
     protected $arrivalDeviationAffect;
     /**
@@ -111,9 +112,9 @@ class RealTimeInfo
     }
 
     /**
-     * @return null|string
+     * @return null|RealTimeAffect
      */
-    public function getDepartureDeviationAffect(): ?string
+    public function getDepartureDeviationAffect(): ?RealTimeAffect
     {
         return $this->departureDeviationAffect;
     }
@@ -127,9 +128,9 @@ class RealTimeInfo
     }
 
     /**
-     * @return null|string
+     * @return null|RealTimeAffect
      */
-    public function getArrivalDeviationAffect(): ?string
+    public function getArrivalDeviationAffect(): ?RealTimeAffect
     {
         return $this->arrivalDeviationAffect;
     }
@@ -137,7 +138,7 @@ class RealTimeInfo
     /**
      * @return bool|null
      */
-    public function getCanceled(): ?bool
+    public function isCanceled(): ?bool
     {
         return $this->canceled;
     }
