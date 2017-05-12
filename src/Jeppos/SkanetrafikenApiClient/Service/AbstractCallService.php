@@ -2,8 +2,10 @@
 
 namespace Jeppos\SkanetrafikenApiClient\Service;
 
+use Consistence\JmsSerializer\Enum\EnumSerializerHandler;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
+use JMS\Serializer\Handler\HandlerRegistry;
 use JMS\Serializer\SerializerBuilder;
 
 /**
@@ -22,7 +24,7 @@ abstract class AbstractCallService
     protected $options = [];
 
     /**
-     * DepartureBoard constructor.
+     * AbstractCallService constructor.
      * @param Client $client
      */
     public function __construct(Client $client)
@@ -37,7 +39,13 @@ abstract class AbstractCallService
 
         $xmlFromSoapResponse = $this->getXmlFromSoapResponse($response);
 
-        $serializer = SerializerBuilder::create()->build();
+        $serializer = SerializerBuilder::create()
+            ->addDefaultHandlers()
+            ->configureHandlers(function (HandlerRegistry $registry) {
+                $registry->registerSubscribingHandler(new EnumSerializerHandler());
+            })
+            ->build();
+
         return $serializer->deserialize($xmlFromSoapResponse, $this->getResponseClass(), 'xml');
     }
 
@@ -60,7 +68,7 @@ abstract class AbstractCallService
         /** @var \SimpleXMLElement $response */
         $response = $soap->Body->children($namespaces['']);
 
-        return $response->asXml();
+        return $response->asXML();
     }
 
     /**
