@@ -4,7 +4,7 @@
     <property name="basedir" value=""/>
 
     <target name="build" depends="composer,lint,phpcs,phpmd,phpunit" description=""/>
-    <target name="build-ci" depends="prepare-ci,composer,lint,phpcs,phpmd,phpunit-ci" description=""/>
+    <target name="build-ci" depends="prepare-ci,composer,lint,phpunit-ci" description=""/>
 
     <target name="clean-ci" unless="clean.done">
         <delete dir="${basedir}/build"/>
