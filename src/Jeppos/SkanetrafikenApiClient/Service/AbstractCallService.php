@@ -38,8 +38,10 @@ abstract class AbstractCallService
 
     public function call()
     {
-        $url = 'http://www.labs.skanetrafiken.se/v2.2/' . $this->getUrl();
-        $this->response = $this->client->request('GET', $url . '?' . http_build_query($this->options));
+        $this->response = $this->client->request(
+            'GET',
+            $this->getUrl() . '?' . http_build_query($this->options)
+        );
 
         return $this;
     }
