@@ -5,7 +5,6 @@ namespace Jeppos\SkanetrafikenApiClient\Service;
 use Consistence\JmsSerializer\Enum\EnumSerializerHandler;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
-use JMS\Serializer\Handler\ArrayCollectionHandler;
 use JMS\Serializer\Handler\HandlerRegistry;
 use JMS\Serializer\SerializerBuilder;
 
@@ -41,9 +40,9 @@ abstract class AbstractCallService
         $xmlFromSoapResponse = $this->getXmlFromSoapResponse($response);
 
         $serializer = SerializerBuilder::create()
+            ->addDefaultHandlers()
             ->configureHandlers(function (HandlerRegistry $registry) {
                 $registry->registerSubscribingHandler(new EnumSerializerHandler());
-                $registry->registerSubscribingHandler(new ArrayCollectionHandler());
             })
             ->build();
 
