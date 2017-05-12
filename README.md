@@ -12,10 +12,10 @@ composer require jeppos/skanetrafiken-php-api-client
 
 # Usage
 
-Following example shows how to get upcoming depatures from Malmö C.
+Following example shows how to get upcoming departures from Malmö C.
 
 ```php
-use \Jeppos\SkanetrafikenApiClient\Service\ArrivalBoard;
+use \Jeppos\SkanetrafikenApiClient\Service\DepartureBoard;
 
 $guzzleClient = new \GuzzleHttp\Client([
     'base_uri' => 'http://www.labs.skanetrafiken.se/v2.2/' // Version 2.2 of Skånetrafiken API
