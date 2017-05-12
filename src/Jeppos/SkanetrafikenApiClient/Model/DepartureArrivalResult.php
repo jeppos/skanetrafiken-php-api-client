@@ -41,6 +41,14 @@ class DepartureArrivalResult
      * @Serializer\Type("ArrayCollection<Jeppos\SkanetrafikenApiClient\Model\Line>")
      */
     protected $lines;
+    /**
+     * @var StopAreaData
+     *
+     * @Serializer\SerializedName("StopAreaData")
+     * @Serializer\XmlElement()
+     * @Serializer\Type("Jeppos\SkanetrafikenApiClient\Model\StopAreaData")
+     */
+    protected $stopAreaData;
 
     /**
      * @return int
@@ -64,5 +72,13 @@ class DepartureArrivalResult
     public function getLines(): ArrayCollection
     {
         return $this->lines;
+    }
+
+    /**
+     * @return StopAreaData
+     */
+    public function getStopAreaData(): StopAreaData
+    {
+        return $this->stopAreaData;
     }
 }
