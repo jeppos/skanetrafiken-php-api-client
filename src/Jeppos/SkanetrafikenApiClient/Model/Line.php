@@ -120,6 +120,14 @@ class Line
      */
     protected $trainNumber;
     /**
+     * @var ArrayCollection|Deviation[]
+     *
+     * @Serializer\SerializedName("Deviations")
+     * @Serializer\XmlList(namespace="http://www.etis.fskab.se/v1.0/ETISws", entry="Deviation")
+     * @Serializer\Type("ArrayCollection<Jeppos\SkanetrafikenApiClient\Model\Deviation>")
+     */
+    protected $deviations;
+    /**
      * @var integer
      *
      * @Serializer\SerializedName("RunNo")
