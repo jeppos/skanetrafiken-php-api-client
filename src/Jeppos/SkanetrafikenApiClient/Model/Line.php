@@ -94,6 +94,14 @@ class Line
      */
     protected $towards;
     /**
+     * @var ArrayCollection|FootNote[]
+     *
+     * @Serializer\SerializedName("FootNotes")
+     * @Serializer\XmlList(namespace="http://www.etis.fskab.se/v1.0/ETISws", entry="FootNote")
+     * @Serializer\Type("ArrayCollection<Jeppos\SkanetrafikenApiClient\Model\FootNote>")
+     */
+    protected $footNotes;
+    /**
      * @var ArrayCollection|RealTimeInfo[]
      *
      * @Serializer\SerializedName("RealTime")
@@ -182,6 +190,14 @@ class Line
     public function getTowards(): string
     {
         return $this->towards;
+    }
+
+    /**
+     * @return ArrayCollection|FootNote[]
+     */
+    public function getFootNotes(): ArrayCollection
+    {
+        return $this->footNotes;
     }
 
     /**
