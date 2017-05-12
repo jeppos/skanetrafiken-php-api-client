@@ -55,7 +55,7 @@ class DepartureArrivalResult
     }
 
     /**
-     * @return ArrayCollection
+     * @return ArrayCollection|Line[]
      */
     public function getLines(): ArrayCollection
     {

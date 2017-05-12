@@ -166,6 +166,14 @@ class Line
     }
 
     /**
+     * @return ArrayCollection|RealTimeInfo[]
+     */
+    public function getRealTime(): ArrayCollection
+    {
+        return $this->realTime;
+    }
+
+    /**
      * @return int
      */
     public function getTrainNumber(): int
