@@ -23,7 +23,7 @@ class DepartureBoardTest extends TestCase
     public function shouldSerializeResponseWithDepartureArrivalResponse()
     {
         $mock = new MockHandler([
-            new Response(200, [], file_get_contents(__DIR__ .'/../Mocks/stationresults_80000.xml')),
+            new Response(200, [], file_get_contents(__DIR__ . '/../Mocks/stationresults_80000_soap.xml')),
         ]);
 
         $handler = HandlerStack::create($mock);
@@ -33,7 +33,11 @@ class DepartureBoardTest extends TestCase
         $departureArrivalResponseMock = $this->createMock(DepartureArrivalResponse::class);
 
         $serializerMock->method('deserialize')
-            ->with(self::anything(), DepartureArrivalResponse::class, self::anything())
+            ->with(
+                file_get_contents(__DIR__ . '/../Mocks/stationresults_80000.xml'),
+                DepartureArrivalResponse::class,
+                'xml'
+            )
             ->willReturn($departureArrivalResponseMock);
 
         $sut = new DepartureBoard($client, $serializerMock);
