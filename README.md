@@ -18,13 +18,14 @@ composer require jeppos/skanetrafiken-php-api-client
 Following example shows how to get upcoming departures from Malmö C.
 
 ```php
-use \Jeppos\SkanetrafikenApiClient\Service\DepartureBoard;
+use Jeppos\SkanetrafikenApiClient\SerializerFactory;
+use Jeppos\SkanetrafikenApiClient\Service\DepartureBoard;
 
 $guzzleClient = new \GuzzleHttp\Client([
     'base_uri' => 'http://www.labs.skanetrafiken.se/v2.2/' // Version 2.2 of Skånetrafiken API
 ]);
 
-$departureBoard = new DepartureBoard($guzzleClient);
+$departureBoard = new DepartureBoard($guzzleClient, SerializerFactory::create());
 $departureBoard->setStopAreaId(80000); // 80000 = Malmö C
 $departureBoard->call();
 

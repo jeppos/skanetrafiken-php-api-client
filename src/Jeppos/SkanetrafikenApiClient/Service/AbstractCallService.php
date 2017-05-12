@@ -2,11 +2,9 @@
 
 namespace Jeppos\SkanetrafikenApiClient\Service;
 
-use Consistence\JmsSerializer\Enum\EnumSerializerHandler;
-use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
-use JMS\Serializer\Handler\HandlerRegistry;
-use JMS\Serializer\SerializerBuilder;
+use JMS\Serializer\SerializerInterface;
 
 /**
  * Class AbstractCallService
@@ -15,9 +13,13 @@ use JMS\Serializer\SerializerBuilder;
 abstract class AbstractCallService
 {
     /**
-     * @var Client
+     * @var ClientInterface
      */
     protected $client;
+    /**
+     * @var SerializerInterface
+     */
+    protected $serializer;
     /**
      * @var array
      */
@@ -29,11 +31,13 @@ abstract class AbstractCallService
 
     /**
      * AbstractCallService constructor.
-     * @param Client $client
+     * @param ClientInterface $client
+     * @param SerializerInterface $serializer
      */
-    public function __construct(Client $client)
+    public function __construct(ClientInterface $client, SerializerInterface $serializer)
     {
         $this->client = $client;
+        $this->serializer = $serializer;
     }
 
     public function call()
@@ -48,14 +52,11 @@ abstract class AbstractCallService
 
     public function getResponse()
     {
-        $serializer = SerializerBuilder::create()
-            ->addDefaultHandlers()
-            ->configureHandlers(function (HandlerRegistry $registry) {
-                $registry->registerSubscribingHandler(new EnumSerializerHandler());
-            })
-            ->build();
-
-        return $serializer->deserialize($this->getXmlFromResponse(), $this->getResponseClass(), 'xml');
+        return $this->serializer->deserialize(
+            $this->getXmlFromResponse(),
+            $this->getResponseClass(),
+            'xml'
+        );
     }
 
     /**
